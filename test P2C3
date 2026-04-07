@@ -1,0 +1,24 @@
+def salaire_mensuel(salaire_annuel):
+    salaire_mensuel = salaire_annuel / 12
+    return salaire_mensuel
+    
+def salaire_hebdomadaire(salaire_mensuel):
+    salaire_hebdomadaire = salaire_mensuel / 4
+    return salaire_hebdomadaire
+    
+def salaire_horaire(salaire_hebdomadaire, heures_travaillees):
+    salaire_horaire = salaire_hebdomadaire / heures_travaillees
+    return salaire_horaire
+
+salaire_annuel = input("Entrer votre salaire annuel :")
+
+heures_travaillees = input("Entrer votre nombre d'heures travaillées par semaine :") 
+
+salaire_annuel = float(salaire_annuel)
+heures_travaillees = float(heures_travaillees)
+
+salaire_mensuel(salaire_annuel)
+salaire_hebdomadaire(salaire_mensuel)
+salaire_horaire(salaire_hebdomadaire, heures_travaillees)
+
+print(f"Votre salaire horaires est de {salaire_horaire} euros.")
